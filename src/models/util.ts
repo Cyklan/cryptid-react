@@ -1,0 +1,1 @@
+export type HexCoordinate<T> = T[][]
