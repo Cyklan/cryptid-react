@@ -23,7 +23,7 @@ function App() {
     setTiles(board.tiles);
     const rules = generateAllRules();
     while (true) {
-      const gameRules = pickRules(rules);
+      const gameRules = pickRules(structuredClone(rules));
       if (validate(board, gameRules)) {
         setRules(gameRules);
         const bitfields = gameRules.map((rule) =>
